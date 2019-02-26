@@ -1,0 +1,481 @@
+p {
+	display: block;
+	-webkit-margin-before: 0;
+	-webkit-margin-after: 0;
+	-webkit-margin-start: 0;
+	-webkit-margin-end: 0;
+}
+
+.layout {
+	width: 1200px;
+	margin: 0 auto;
+}
+
+.famousBrand_Title {
+	color: #E6002D;
+	font-size: 25px;
+	font-weight: 700;
+}
+
+
+.famousBrand_box {
+	display: flex;
+	flex-direction: row;
+	height: 60px;
+	line-height: 60px;
+}
+
+.enterBrand {
+	line-height: 66px;
+	flex: 1;
+	text-align: right;
+	font-size: 16px;
+	margin-right: 20px;
+}
+
+.viewMore {
+	margin-top: 15px;
+	text-align: center;
+	font-size: 16px;
+	width: 120px;
+	height: 30px;
+	line-height: 30px;
+	border: 1px solid red;
+	border-radius: 20px;
+	color: red;
+}
+
+.viewMore:hover {
+	color: white;
+	background-color: red;
+}
+
+.brandInformation {
+	width: 1200px;
+	height: 356px;
+	background-color: #f2f2f2;
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+.logo_box {
+	display: block;
+	float: left;
+	width: 185px;
+	height: 100px;
+	background-color: #ffffff;
+	border-radius: 5px;
+	text-align: center;
+	margin: 13px 0 0 13px;
+	box-sizing: border-box;
+}
+
+.logo_box:hover {
+	border: 1px solid #e30c33;
+	/* width: 382px;
+	height: 214px;
+	background-color: #ffffff;
+	border-radius: 5px;
+	margin-left: 210px; */
+}
+
+
+.SpikeKillZone {
+	width: 1200px;
+	height: 330px;
+	background-color: #f2f2f2;
+	border-radius: 10px;
+	overflow: hidden;
+
+}
+
+.HotGift {
+	width: 1200px;
+	height: 842px;
+	background-color: #f2f2f2;
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+.newProducts {
+	margin-top: 14px;
+	margin-left: 16px;
+	width: 280px;
+	height: 400px;
+	background-color: #ffffff;
+	border-radius: 10px;
+	display: block;
+	float: left;
+	box-sizing: border-box;
+}
+
+.commodityImg {
+	width: 280px;
+	height: 191px;
+	margin-bottom: 10px;
+	background: red;
+	border-radius: 10px 10px 0px 0px;
+}
+
+.commodityImg img {
+	width: 280px;
+	height: 191px;
+	border-radius: 10px 10px 0px 0px;
+}
+
+.imgbox {
+	display: flex;
+	flex-direction: row;
+	height: 50px;
+	line-height: 50px;
+	margin-bottom: 5px;
+}
+
+.img1 {
+	flex: 1;
+	display: flex;
+	flex-direction: row;
+}
+
+.Photos {
+	width: 39px;
+	height: 44px;
+	background-color: #ffffff;
+	border-radius: 5px;
+	margin: 0 5px;
+}
+
+.Photos img {
+	width: 39px;
+	height: 44px;
+	border-radius: 5px;
+}
+
+.br2 {
+	border: 2px solid #ff7b7b;
+}
+
+.productBox {
+	margin: 0 5px;
+}
+
+.price {
+	display: flex;
+	flex-direction: row;
+	height: 30px;
+	line-height: 30px;
+}
+
+.company {
+	display: flex;
+	flex-direction: row;
+	font-size: 12px;
+}
+
+.activity {
+	display: flex;
+	flex-direction: row;
+	margin-top: 10px;
+}
+
+.num {
+	font-size: 18px;
+	color: red;
+	flex: 1;
+}
+
+.addUp {
+	font-size: 12px;
+	color: #666666;
+	flex: 1;
+	text-align: right;
+}
+
+.seckill {
+	color: white;
+	background-color: #e30c33;
+	font-size: 14px;
+	padding: 0 6px;
+	margin-right: 10px;
+}
+
+.fullMinus {
+	color: white;
+	background-color: #e30c33;
+	font-size: 14px;
+	padding: 0 6px;
+}
+
+.firm {
+	font-size: 16px;
+	color: #666666;
+	flex: 1;
+}
+
+.melt {
+	width: 18px;
+	height: 18px;
+	text-align: center;
+	line-height: 18px;
+	background-color: #ffffff;
+	border: solid 1px #e30c33;
+	border-radius: 50%;
+	color: #e51c40;
+	margin-right: 5px;
+}
+
+.companyName {
+	height: 18px;
+	line-height: 18px;
+	color: #666666;
+	flex: 1;
+}
+
+.year {
+	color: #e51c40;
+	height: 18px;
+	line-height: 18px;
+}
+
+.tradeName {
+	font-size: 16px;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+	overflow: hidden;
+	margin-bottom: 5px;
+	height: 42px;
+}
+
+.priceNumBox {
+	display: flex;
+	flex-direction: row;
+	margin-top: 8px;
+	height: 40px;
+}
+
+.numBox1 {
+	flex: 1;
+}
+
+.numBox2 {
+	flex: 1;
+	text-align: center;
+}
+
+.numBox3 {
+	flex: 1;
+	text-align: right;
+}
+
+.num1 {
+	font-size: 18px;
+	color: red;
+}
+
+.num2 {
+	font-size: 18px;
+	color: red;
+	margin-right: 4px;
+}
+
+.num3 {
+	font-size: 18px;
+	color: red;
+	margin-right: 14px;
+}
+
+.sectionNum1 {
+	font-size: 12px;
+	color: #666666;
+	margin-left: 5px;
+}
+
+.sectionNum {
+	font-size: 12px;
+	color: #666666;
+}
+
+.certifiedCompany {
+	display: flex;
+	flex-direction: row;
+	color: #666666;
+	font-size: 16px;
+	margin-top: 15px;
+}
+
+.companyName1 {
+	flex: 1;
+}
+
+.countDown {
+	width: 225px;
+	height: 302px;
+	background-color: #e30c33;
+	border-radius: 10px;
+	margin-top: 14px;
+	margin-left: 12.5px;
+	overflow: hidden;
+	float: left;
+}
+
+.seckillLogo {
+	margin-top: 28px;
+	margin-left: 26px;
+}
+
+.seckillTime {
+	text-align: center;
+	color: white;
+	margin-top: 23px;
+}
+
+.countZero {
+	text-align: center;
+	margin-top: 5px;
+	color: white;
+	font-size: 20px;
+}
+
+.clock {
+	text-align: center;
+	margin-top: 10px;
+}
+
+.seckillCommodity {
+	width: 225px;
+	height: 302px;
+	background-color: white;
+	border-radius: 10px;
+	margin-top: 14px;
+	margin-left: 12.5px;
+	overflow: hidden;
+	float: left;
+	position: relative;
+}
+
+.merchandiseImg {
+	width: 225px;
+	height: 190px;
+	border-radius: 10px 10px 0px 0px;
+}
+
+.merchandiseImg img {
+	width: 225px;
+	height: 190px;
+}
+
+.tradeName1 {
+	font-size: 16px;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+	overflow: hidden;
+	margin: 5px 0;
+	padding: 0 10px;
+}
+
+.seckillRunOn {
+	display: flex;
+	flex-direction: row;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+
+}
+
+.seckillPricebox {
+	width: 130px;
+	padding: 0 15px;
+	position: relative;
+}
+
+.seckillPrice {
+	color: #e30c33;
+	font-size: 18px;
+	padding-right: 15px;
+}
+
+.delNum {
+	color: #666666;
+	font-size: 14px;
+}
+
+.runOn {
+	background-color: #e30c33;
+	text-align: center;
+	color: #FFFFFF;
+	width: 100px;
+	height: 57px;
+	line-height: 57px;
+	border-radius: 0px 0px 10px 0px;
+	font-size: 16px;
+}
+
+.ivu-progress-bg {
+	background-color: #e30c33 !important;
+	height: 6px !important;
+}
+
+.ivu-progress-inner {
+	background-color: #c5c5c5 !important;
+}
+
+.pmgressbar {
+	position: absolute;
+	bottom: 2px;
+	left: 15px;
+	right: 15px;
+}
+
+.priceNum {
+	height: 22px;
+	line-height: 22px;
+}
+
+.seckillCommodityBOX {
+	position: relative;
+
+}
+
+.backImg {
+	position: absolute;
+	left: 250px;
+	top: 138px;
+	width: 28px;
+	height: 53px;
+	padding-top: 17px;
+	text-align: center;
+	opacity: 0.6;
+	z-index: 1;
+	background-color: white;
+}
+
+.nextImg {
+	position: absolute;
+	right: 12px;
+	top: 138px;
+	width: 28px;
+	height: 53px;
+	padding-top: 17px;
+	text-align: center;
+	opacity: 0.6;
+	z-index: 1;
+	background-color: white;
+}
+
+.backImg:hover {
+	opacity: 0.8;
+}
+
+.nextImg:hover {
+	opacity: 0.8;
+}
+
+.hide {	
+	display: none;	
+}
+.pricebox{
+	padding: 0 5px;
+}

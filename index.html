@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" href="./css/famousBrand.css">
+
+	</head>
+	<body>
+		<div id="pc" class="layout">
+			<div class="famousBrand_box">
+				<p class="famousBrand_Title">上市新品 &nbsp; Quality new products</p>
+				<p class="enterBrand"></p>
+				<p class="viewMore">查看更多</p>
+			</div>
+			<div class="HotGift">
+				<div class="newProducts" :id="'prod'+idx" v-for="(product,idx) in products">
+					<div class="commodityImg" @mouseenter="enter(idx)" @mouseleave="leave(idx)">
+						<img class="bigImg" src="./images/rect001.jpeg">
+					</div>
+					<div class="productBox">
+						<div class="imgbox">
+							<div @click="clickBack(idx)"><img src="./images/back.png"></div>
+							<div class="img1">
+								<div class="Photos" :class="['imgbox'+i,{'br2':i<1}]" v-for="(imgsrc,i) in product.imgs" @click="clickImg(idx,i,imgsrc)"><img
+									 :src="imgsrc" /></div>
+							</div>
+							<div @click="clickNext(idx)"><img src="./images/next.png"></div>
+						</div>
+						<div class="tradeName">{{product.name}}</div>
+						<div class="pricebox">
+							<div class="price">
+								<div class="num">￥<span>{{product.money}}</span></div>
+								<div class="addUp">累计销售<span>200</span>件</div>
+							</div>
+							<div class="company">
+								<div class="companyName">义乌市江鑫饰品有限公司</div>
+								<div class="melt">销</div>
+								<div class="year">1年</div>
+							</div>
+							<div class="activity">
+								<div class="firm">生产商/工厂</div>
+								<div class="seckill">秒杀</div>
+								<div class="fullMinus">满减</div>
+							</div>
+						</div>
+						<div class="pricebox hide">
+							<div class="priceNumBox">
+								<div class="numBox1">
+									<div class="num1">￥<span>{{product.money}}</span></div>
+									<div class="sectionNum1">1~50个</div>
+								</div>
+								<div class="numBox2">
+									<div class="num2">￥<span>149</span></div>
+									<div class="sectionNum">51~500个</div>
+								</div>
+								<div class="numBox3">
+									<div class="num3">￥<span>119</span></div>
+									<div class="sectionNum">501~2000个</div>
+								</div>
+							</div>
+							<div class="certifiedCompany">
+								<div class="companyName1">广东省深圳市宝安区</div>
+								<div>实体认证</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+			</div>
+		</div>
+		<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+		<script src="./js/vue.js"></script>
+		<script>
+			var pc = new Vue({
+				el: "#pc",
+				data: {
+					products: [{
+							name: "BURBERRY 巴宝莉 女款黑色Vintage格纹皮质钱包单",
+							money: 189,
+							imgs: ["./images/rect001.jpeg", "./images/rect002.jpeg", "./images/rect003.jpeg", "./images/rect004.jpeg",
+								"./images/rect005.jpeg"
+							]
+						},
+						{
+							name: "施华洛世奇",
+							money: 268,
+							imgs: ["./images/rect001.jpeg", "./images/rect002.jpeg", "./images/rect003.jpeg", "./images/rect004.jpeg",
+								"./images/rect005.jpeg"
+							]
+						},
+						{
+							name: "套餐",
+							money: 777,
+							imgs: ["./images/rect001.jpeg", "./images/rect002.jpeg", "./images/rect003.jpeg", "./images/rect004.jpeg",
+								"./images/rect005.jpeg"
+							]
+						},{
+							name: "套餐",
+							money: 777,
+							imgs: ["./images/rect001.jpeg", "./images/rect002.jpeg", "./images/rect003.jpeg", "./images/rect004.jpeg",
+								"./images/rect005.jpeg"
+							]
+						},
+						{
+							name: "套餐",
+							money: 777,
+							imgs: ["./images/rect001.jpeg", "./images/rect002.jpeg", "./images/rect003.jpeg", "./images/rect004.jpeg",
+								"./images/rect005.jpeg"
+							]
+						},
+						{
+							name: "套餐",
+							money: 777,
+							imgs: ["./images/rect001.jpeg", "./images/rect002.jpeg", "./images/rect003.jpeg", "./images/rect004.jpeg",
+								"./images/rect005.jpeg"
+							]
+						},
+						{
+							name: "套餐",
+							money: 777,
+							imgs: ["./images/rect001.jpeg", "./images/rect002.jpeg", "./images/rect003.jpeg", "./images/rect004.jpeg",
+								"./images/rect005.jpeg"
+							]
+						},
+						{
+							name: "套餐",
+							money: 777,
+							imgs: ["./images/rect001.jpeg", "./images/rect002.jpeg", "./images/rect003.jpeg", "./images/rect004.jpeg",
+								"./images/rect005.jpeg"
+							]
+						}
+					]
+				},
+				created: function() { // 进入
+
+				},
+				methods: {
+					enter(idx) {
+						$("#prod" + idx).find(".pricebox").removeClass('hide');
+						$("#prod" + idx).find(".pricebox").eq(0).addClass('hide');
+
+
+					},
+					leave(idx) {
+						$("#prod" + idx).find(".pricebox").removeClass('hide');
+						$("#prod" + idx).find(".pricebox").eq(1).addClass('hide');
+					},
+					clickBack: function(idx) {
+						// 如果是第1个，指定imgbox4加边框
+						let curImg = $("#prod" + idx).find('.br2'); // 找到带边框的活动元素
+						let curIdx = curImg.index(); // 当前图片索引
+						let presrc = ""; // 上一张图片src
+						console.log("(上一张)产品:" + idx + ",当前红框:" + curIdx);
+						$("#prod" + idx).find(".Photos").removeClass('br2');
+						if (curIdx < 1) {
+							$("#prod" + idx).find(".imgbox4").addClass('br2');
+							presrc = $("#prod" + idx).find(".imgbox4 img").attr('src');
+						} else {
+							$("#prod" + idx).find(".imgbox" + (curIdx - 1)).addClass('br2');
+							presrc = $("#prod" + idx).find(".imgbox" + (curIdx - 1) + " img").attr('src');
+						}
+						$("#prod" + idx).find(".bigImg").attr("src", presrc);
+					},
+					clickNext: function(idx) {
+						// 如果是最后个，指定imgbox0加边框
+						let curImg = $("#prod" + idx).find('.br2'); // 找到带边框的活动元素
+						let curIdx = curImg.index(); // 当前图片索引
+						let nextsrc = ""; // 下一张图片src
+						console.log("(下一张)产品:" + idx + ",当前红框:" + curIdx);
+						$("#prod" + idx).find(".Photos").removeClass('br2');
+						if (curIdx >= 4) {
+							$("#prod" + idx).find(".imgbox0").addClass('br2');
+							nextsrc = $("#prod" + idx).find(".imgbox0 img").attr('src');
+						} else {
+							$("#prod" + idx).find(".imgbox" + (curIdx + 1)).addClass('br2');
+							nextsrc = $("#prod" + idx).find(".imgbox" + (curIdx + 1) + " img").attr('src');
+						}
+						$("#prod" + idx).find(".bigImg").attr("src", nextsrc);
+					},
+					clickImg(idx, i, imgsrc) { // 点击小图
+						console.log("产品:" + idx + ",图片:" + i + ",src：" + imgsrc);
+						$("#prod" + idx).find(".bigImg").attr("src", imgsrc);
+						$("#prod" + idx).find(".Photos").removeClass('br2');
+						$("#prod" + idx).find(".imgbox" + i).addClass('br2');
+					}
+
+				}
+			})
+		</script>
+	</body>
+</html>
